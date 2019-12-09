@@ -1,0 +1,208 @@
+CREATE DATABASE Db_Gubee
+
+USE DATABASE Db_Gubee
+
+CREATE TABLE tb_productName(
+	id integer not null,
+	nome varchar (100) primary key
+)
+
+CREATE TABLE tb_targetMarket(
+	id integer not null ,
+	nome varchar (100) primary key
+)
+
+CREATE TABLE tb_stack(
+	id integer not null ,
+	nome varchar (30)primary key
+)
+
+CREATE TABLE tb_gubeeJson(
+		id integer not null,
+		productName varchar(100),
+		description varchar(100),
+		targetMarket varchar(100),
+		stack varchar(100), 
+		foreign key (productName) references tb_productName(nome),
+		foreign key (targetMarket) references tb_targetMarket(nome),
+		foreign key (stack) references tb_stack(nome)
+)
+
+
+SELECT * FROM tb_stack
+DROP TABLE tb_stack
+
+SELECT * FROM tb_productName
+DROP TABLE tb_productName
+
+SELECT * FROM tb_targetMarket
+DROP TABLE tb_targetMarket
+
+SELECT * FROM tb_gubeeJson
+
+INSERT INTO tb_productName
+VALUES (1, 'Gubee Integrador');
+INSERT INTO tb_productName
+VALUES (2, 'Gubee Fretes');
+INSERT INTO tb_productName
+VALUES (3, 'Gubee AntiFraude');
+
+
+INSERT INTO tb_targetMarket
+VALUES (1, 'Ecommerce');
+INSERT INTO tb_targetMarket
+VALUES (2, 'ERP');
+INSERT INTO tb_targetMarket
+VALUES (3, 'Lojista que não desejam possuir ecommerce');
+INSERT INTO tb_targetMarket
+VALUES (4, 'Loja fisica');
+INSERT INTO tb_targetMarket
+VALUES (5, 'Telecom');
+INSERT INTO tb_targetMarket
+VALUES (6, 'Venda direta');
+INSERT INTO tb_targetMarket
+VALUES (7, 'Mobile First');
+INSERT INTO tb_targetMarket
+VALUES (8, 'Digital Onboarding');
+
+
+INSERT INTO tb_stack
+VALUES (1, 'Java 10');
+INSERT INTO tb_stack
+VALUES (2, 'Kotlin');
+INSERT INTO tb_stack
+VALUES (3, 'Kafka');
+INSERT INTO tb_stack
+VALUES (4, 'Event Stream');
+INSERT INTO tb_stack
+VALUES (5, 'Redis');
+INSERT INTO tb_stack
+VALUES (6, 'MongoDB');
+INSERT INTO tb_stack
+VALUES (7, 'NodeJS');
+INSERT INTO tb_stack
+VALUES (8, 'Big Data Analytics');
+INSERT INTO tb_stack
+VALUES (9, 'Hadoop');
+INSERT INTO tb_stack
+VALUES (10, 'Pig');
+INSERT INTO tb_stack
+VALUES (11, 'Cassandra');
+
+
+INSERT INTO tb_gubeeJson VALUES
+(1, 'Gubee Integrador', 'Ferramenta de integração para marketplaces', 'Ecommerce', 'Java 10');
+INSERT INTO tb_gubeeJson VALUES
+(1, 'Gubee Integrador', 'Ferramenta de integração para marketplaces', 'Ecommerce', 'Kotlin');
+INSERT INTO tb_gubeeJson VALUES
+(1, 'Gubee Integrador', 'Ferramenta de integração para marketplaces', 'Ecommerce', 'Kafka');
+INSERT INTO tb_gubeeJson VALUES
+(1, 'Gubee Integrador', 'Ferramenta de integração para marketplaces', 'Ecommerce', 'Event Stream');
+INSERT INTO tb_gubeeJson VALUES
+(1, 'Gubee Integrador', 'Ferramenta de integração para marketplaces', 'Ecommerce', 'Redis');
+INSERT INTO tb_gubeeJson VALUES
+(1, 'Gubee Integrador', 'Ferramenta de integração para marketplaces', 'Ecommerce', 'MongoDB');
+
+INSERT INTO tb_gubeeJson VALUES
+(1, 'Gubee Integrador', 'Ferramenta de integração para marketplaces', 'ERP', 'Java 10');
+INSERT INTO tb_gubeeJson VALUES
+(1, 'Gubee Integrador', 'Ferramenta de integração para marketplaces', 'ERP', 'Kotlin');
+INSERT INTO tb_gubeeJson VALUES
+(1, 'Gubee Integrador', 'Ferramenta de integração para marketplaces', 'ERP', 'Kafka');
+INSERT INTO tb_gubeeJson VALUES
+(1, 'Gubee Integrador', 'Ferramenta de integração para marketplaces', 'ERP', 'Event Stream');
+INSERT INTO tb_gubeeJson VALUES
+(1, 'Gubee Integrador', 'Ferramenta de integração para marketplaces', 'ERP', 'Redis');
+INSERT INTO tb_gubeeJson VALUES
+(1, 'Gubee Integrador', 'Ferramenta de integração para marketplaces', 'ERP', 'MongoDB');
+
+INSERT INTO tb_gubeeJson VALUES
+(1, 'Gubee Integrador', 'Ferramenta de integração para marketplaces', 'Lojista que não desejam possuir ecommerce', 'Java 10');
+INSERT INTO tb_gubeeJson VALUES
+(1, 'Gubee Integrador', 'Ferramenta de integração para marketplaces', 'Lojista que não desejam possuir ecommerce', 'Kotlin');
+INSERT INTO tb_gubeeJson VALUES
+(1, 'Gubee Integrador', 'Ferramenta de integração para marketplaces', 'Lojista que não desejam possuir ecommerce', 'Kafka');
+INSERT INTO tb_gubeeJson VALUES
+(1, 'Gubee Integrador', 'Ferramenta de integração para marketplaces', 'Lojista que não desejam possuir ecommerce', 'Event Stream');
+INSERT INTO tb_gubeeJson VALUES
+(1, 'Gubee Integrador', 'Ferramenta de integração para marketplaces', 'Lojista que não desejam possuir ecommerce', 'Redis');
+INSERT INTO tb_gubeeJson VALUES
+(1, 'Gubee Integrador', 'Ferramenta de integração para marketplaces', 'Lojista que não desejam possuir ecommerce', 'MongoDB');
+
+
+INSERT INTO tb_gubeeJson VALUES
+(2, 'Gubee Fretes', 'Ferramenta para gestão e calculo de fretes', 'Ecommerce', 'NodeJS');
+INSERT INTO tb_gubeeJson VALUES
+(2, 'Gubee Fretes', 'Ferramenta para gestão e calculo de fretes', 'Ecommerce', 'MongoDB');
+INSERT INTO tb_gubeeJson VALUES
+(2, 'Gubee Fretes', 'Ferramenta para gestão e calculo de fretes', 'ERP', 'NodeJS');
+INSERT INTO tb_gubeeJson VALUES
+(2, 'Gubee Fretes', 'Ferramenta para gestão e calculo de fretes', 'ERP', 'MongoDB');
+INSERT INTO tb_gubeeJson VALUES
+(2, 'Gubee Fretes', 'Ferramenta para gestão e calculo de fretes', 'Loja fisica', 'NodeJS');
+INSERT INTO tb_gubeeJson VALUES
+(2, 'Gubee Fretes', 'Ferramenta para gestão e calculo de fretes', 'Loja fisica', 'MongoDB');
+
+INSERT INTO tb_gubeeJson VALUES
+(3, 'Gubee Fretes', 'Ferramenta para gestão e calculo de fretes', 'Ecommerce', 'NodeJS');
+INSERT INTO tb_gubeeJson VALUES
+(3, 'Gubee Fretes', 'Ferramenta para gestão e calculo de fretes', 'Ecommerce', 'MongoDB');
+INSERT INTO tb_gubeeJson VALUES
+(3, 'Gubee Fretes', 'Ferramenta para gestão e calculo de fretes', 'ERP', 'NodeJS');
+INSERT INTO tb_gubeeJson VALUES
+(3, 'Gubee Fretes', 'Ferramenta para gestão e calculo de fretes', 'ERP', 'MongoDB');
+INSERT INTO tb_gubeeJson VALUES
+(3, 'Gubee Fretes', 'Ferramenta para gestão e calculo de fretes', 'Loja fisica', 'NodeJS');
+INSERT INTO tb_gubeeJson VALUES
+(3, 'Gubee Fretes', 'Ferramenta para gestão e calculo de fretes', 'Loja fisica', 'MongoDB');
+
+INSERT INTO tb_gubeeJson VALUES
+(4, 'Gubee AntiFraude', 'Ferramenta especialistas em detecção e prevenção à fraude', 'Ecommerce', 'Big Data Analytics');
+INSERT INTO tb_gubeeJson VALUES
+(4, 'Gubee AntiFraude', 'Ferramenta especialistas em detecção e prevenção à fraude', 'Ecommerce', 'Hadoop');
+INSERT INTO tb_gubeeJson VALUES
+(4, 'Gubee AntiFraude', 'Ferramenta especialistas em detecção e prevenção à fraude', 'Ecommerce', 'Kafka');
+INSERT INTO tb_gubeeJson VALUES
+(4, 'Gubee AntiFraude', 'Ferramenta especialistas em detecção e prevenção à fraude', 'Ecommerce', 'Pig');
+INSERT INTO tb_gubeeJson VALUES
+(4, 'Gubee AntiFraude', 'Ferramenta especialistas em detecção e prevenção à fraude', 'Ecommerce', 'Cassandra');
+INSERT INTO tb_gubeeJson VALUES
+(4, 'Gubee AntiFraude', 'Ferramenta especialistas em detecção e prevenção à fraude', 'Telecom', 'Big Data Analytics');
+INSERT INTO tb_gubeeJson VALUES
+(4, 'Gubee AntiFraude', 'Ferramenta especialistas em detecção e prevenção à fraude', 'Telecom', 'Hadoop');
+INSERT INTO tb_gubeeJson VALUES
+(4, 'Gubee AntiFraude', 'Ferramenta especialistas em detecção e prevenção à fraude', 'Telecom', 'Kafka');
+INSERT INTO tb_gubeeJson VALUES
+(4, 'Gubee AntiFraude', 'Ferramenta especialistas em detecção e prevenção à fraude', 'Telecom', 'Pig');
+INSERT INTO tb_gubeeJson VALUES
+(4, 'Gubee AntiFraude', 'Ferramenta especialistas em detecção e prevenção à fraude', 'Telecom', 'Cassandra');
+INSERT INTO tb_gubeeJson VALUES
+(4, 'Gubee AntiFraude', 'Ferramenta especialistas em detecção e prevenção à fraude', 'Venda direta', 'Big Data Analytics');
+INSERT INTO tb_gubeeJson VALUES
+(4, 'Gubee AntiFraude', 'Ferramenta especialistas em detecção e prevenção à fraude', 'Venda direta', 'Hadoop');
+INSERT INTO tb_gubeeJson VALUES
+(4, 'Gubee AntiFraude', 'Ferramenta especialistas em detecção e prevenção à fraude', 'Venda direta', 'Kafka');
+INSERT INTO tb_gubeeJson VALUES
+(4, 'Gubee AntiFraude', 'Ferramenta especialistas em detecção e prevenção à fraude', 'Venda direta', 'Pig');
+INSERT INTO tb_gubeeJson VALUES
+(4, 'Gubee AntiFraude', 'Ferramenta especialistas em detecção e prevenção à fraude', 'Venda direta', 'Cassandra');
+INSERT INTO tb_gubeeJson VALUES
+(4, 'Gubee AntiFraude', 'Ferramenta especialistas em detecção e prevenção à fraude', 'Mobile First', 'Big Data Analytics');
+INSERT INTO tb_gubeeJson VALUES
+(4, 'Gubee AntiFraude', 'Ferramenta especialistas em detecção e prevenção à fraude', 'Mobile First', 'Hadoop');
+INSERT INTO tb_gubeeJson VALUES
+(4, 'Gubee AntiFraude', 'Ferramenta especialistas em detecção e prevenção à fraude', 'Mobile First', 'Kafka');
+INSERT INTO tb_gubeeJson VALUES
+(4, 'Gubee AntiFraude', 'Ferramenta especialistas em detecção e prevenção à fraude', 'Mobile First', 'Pig');
+INSERT INTO tb_gubeeJson VALUES
+(4, 'Gubee AntiFraude', 'Ferramenta especialistas em detecção e prevenção à fraude', 'Mobile First', 'Cassandra');
+INSERT INTO tb_gubeeJson VALUES
+(4, 'Gubee AntiFraude', 'Ferramenta especialistas em detecção e prevenção à fraude', 'Digital Onboarding', 'Big Data Analytics');
+INSERT INTO tb_gubeeJson VALUES
+(4, 'Gubee AntiFraude', 'Ferramenta especialistas em detecção e prevenção à fraude', 'Digital Onboarding', 'Hadoop');
+INSERT INTO tb_gubeeJson VALUES
+(4, 'Gubee AntiFraude', 'Ferramenta especialistas em detecção e prevenção à fraude', 'Digital Onboarding', 'Kafka');
+INSERT INTO tb_gubeeJson VALUES
+(4, 'Gubee AntiFraude', 'Ferramenta especialistas em detecção e prevenção à fraude', 'Digital Onboarding', 'Pig');
+INSERT INTO tb_gubeeJson VALUES
+(4, 'Gubee AntiFraude', 'Ferramenta especialistas em detecção e prevenção à fraude', 'Digital Onboarding', 'Cassandra');

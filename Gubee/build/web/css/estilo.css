@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    background-color: #BEBEBE;
+}
+
+table {
+    border-collapse: collapse;	
+    max-width: 1000px;
+    margin: 50px auto;
+    border: solid 3px black;
+    text-align: center;
+}
+
+table caption {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+th, 
+td {
+    padding: 10px;
+}
+
+thead tr {
+    border-bottom: solid 5px #444;
+}
+
+tbody tr:hover {
+    background-color: #dedede;
+}
+
+.targetMarket {
+    display: block;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.stack {
+    display: block;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+button {
+    display: block;
+    width: 100px;
+    height: 50px;
+    margin: 50px auto;
+}
+
+table input{
+    color:navy;
+    width:100%;
+    background-color: lightgray;
+}
+
+.limparFiltros {
+    display: block;
+    width: 100px;
+    height: 50px;
+    margin: 50px auto;
+}
