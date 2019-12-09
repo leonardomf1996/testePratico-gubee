@@ -30,15 +30,13 @@ CREATE TABLE tb_gubeeJson(
 
 
 SELECT * FROM tb_stack
-DROP TABLE tb_stack
 
 SELECT * FROM tb_productName
-DROP TABLE tb_productName
 
 SELECT * FROM tb_targetMarket
-DROP TABLE tb_targetMarket
 
 SELECT * FROM tb_gubeeJson
+
 
 INSERT INTO tb_productName
 VALUES (1, 'Gubee Integrador');
